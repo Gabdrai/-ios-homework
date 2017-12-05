@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Photo_Example" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="cJS-xp-mLg">
+                                <rect key="frame" x="67" y="92" width="240" height="128"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0UM-ha-gRn">
+                                <rect key="frame" x="67" y="241" width="76" height="30"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="BYZ-38-t0r" eventType="touchUpInside" id="has-xN-dmX"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="e3v-EA-1N4">
+                                <rect key="frame" x="146" y="241" width="161" height="30"/>
+                                <state key="normal" title="Get Photo from Library "/>
+                                <connections>
+                                    <action selector="getPhotoFromLibrary:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Zp5-Vz-WkY"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="cJS-xp-mLg" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="3PN-go-DXe"/>
+                            <constraint firstItem="0UM-ha-gRn" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="E1j-cc-eHt"/>
+                            <constraint firstItem="0UM-ha-gRn" firstAttribute="top" secondItem="cJS-xp-mLg" secondAttribute="bottom" constant="21" id="Mek-0i-yw6"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="0UM-ha-gRn" secondAttribute="bottom" constant="396" id="Sak-Ps-Eq4"/>
+                            <constraint firstItem="0UM-ha-gRn" firstAttribute="baseline" secondItem="e3v-EA-1N4" secondAttribute="baseline" id="SgW-CB-GeG"/>
+                            <constraint firstItem="cJS-xp-mLg" firstAttribute="leading" secondItem="0UM-ha-gRn" secondAttribute="leading" id="ViK-r7-ouy"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="e3v-EA-1N4" secondAttribute="bottom" constant="396" id="axa-T5-Oe3"/>
+                            <constraint firstItem="e3v-EA-1N4" firstAttribute="top" secondItem="cJS-xp-mLg" secondAttribute="bottom" constant="21" id="bea-jx-t53"/>
+                            <constraint firstItem="e3v-EA-1N4" firstAttribute="leading" secondItem="0UM-ha-gRn" secondAttribute="trailing" constant="3" id="dRG-fz-nFX"/>
+                            <constraint firstItem="cJS-xp-mLg" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="72" id="f0f-f9-yjI"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="e3v-EA-1N4" secondAttribute="trailing" constant="68" id="hSt-yp-Lni"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="cJS-xp-mLg" secondAttribute="trailing" constant="68" id="hZ5-5g-qjK"/>
+                            <constraint firstItem="cJS-xp-mLg" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="67" id="mbZ-Vg-3nq"/>
+                            <constraint firstItem="cJS-xp-mLg" firstAttribute="trailing" secondItem="e3v-EA-1N4" secondAttribute="trailing" id="rIu-Cw-IeP"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="ImageView" destination="cJS-xp-mLg" id="rLi-zX-w6H"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+        </scene>
+    </scenes>
+</document>
